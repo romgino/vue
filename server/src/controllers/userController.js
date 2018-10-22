@@ -24,3 +24,22 @@ exports.create = async (req, res, next) => {
     res.status(400).send({ message: 'falha', error: e })
   }
 }
+exports.logar = async (req, res, next) => {
+  try {
+    // console.log(req.body.name)
+    await repoUser.login(req.body).then(data => {
+      return res.send(data)
+    })
+  } catch (e) {
+    return res.status(403).send({
+      e: 'login invalido'
+    })
+  }
+}
+exports.login = async (req, res, next) => {
+  try {
+    await console.log(req.body)
+  } catch (e) {
+    console.log(e)
+  }
+}

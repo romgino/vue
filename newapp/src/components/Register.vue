@@ -1,66 +1,62 @@
 <template>
-<div id="app">
-  <v-app id="inspire">
-    <v-layout justify-center>
-      <v-flex xs12 sm10 md8 lg6>
-        <br><br>
-        <v-card ref="form">
-          <v-card-text>
-            <v-text-field
-              ref="name"
-              v-model="name"
-              :rules="[ruless.required]"
-              label="Nome Completo"
-              required
-            ></v-text-field>
-            <v-text-field
-              v-model="email"
-              :rules="emailRules"
-              label="Email"
-              required
-            ></v-text-field>
-            <v-select
-              v-model="turno"
-              ref="turno"
-              :rules="ruless.required"
-              :items="turnos"
-              label="Turno"
-              placeholder="Selecione..."
-              required
-            ></v-select>
-            <v-text-field
-              :append-icon="show1 ? 'visibility_off' : 'visibility'"
-              :type="show1 ? 'text' : 'password'"
-              @click:append="show1 = !show1"
-              v-model="password"
-              label="Senha"
-              value=""
-              :rules="[ruless.required, ruless.min]"
-            ></v-text-field>
-            <v-text-field
-              :append-icon="show2 ? 'visibility_off' : 'visibility'"
-              :type="show2 ? 'text' : 'password'"
-              @click:append="show2 = !show2"
-              v-model="passwordConf"
-              label="Confirmação Senha"
-              id="passwordConf"
-              value=""
-              :rules="[ruless.required]"
-            ></v-text-field>
-          </v-card-text>
-          <v-divider class="mt-5"></v-divider>
-          <v-card-actions>
-            <v-btn flat>Cancel</v-btn>
-            <v-spacer></v-spacer>
-            <v-slide-x-reverse-transition>
-            </v-slide-x-reverse-transition>
-            <v-btn color="primary" flat @click="register">Submit</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-flex>
-    </v-layout>
-  </v-app>
-</div>
+<v-layout justify-center>
+  <v-flex xs12 sm10 md8 lg6>
+    <br><br>
+    <v-card ref="form">
+      <v-card-text>
+        <v-text-field
+          ref="name"
+          v-model="name"
+          :rules="[ruless.required]"
+          label="Nome Completo"
+          required
+        ></v-text-field>
+        <v-text-field
+          v-model="email"
+          :rules="emailRules"
+          label="Email"
+          required
+        ></v-text-field>
+        <v-select
+          v-model="turno"
+          ref="turno"
+          :rules="ruless.required"
+          :items="turnos"
+          label="Turno"
+          placeholder="Selecione..."
+          required
+        ></v-select>
+        <v-text-field
+          :append-icon="show1 ? 'visibility_off' : 'visibility'"
+          :type="show1 ? 'text' : 'password'"
+          @click:append="show1 = !show1"
+          v-model="password"
+          label="Senha"
+          value=""
+          :rules="[ruless.required, ruless.min]"
+        ></v-text-field>
+        <v-text-field
+          :append-icon="show2 ? 'visibility_off' : 'visibility'"
+          :type="show2 ? 'text' : 'password'"
+          @click:append="show2 = !show2"
+          v-model="passwordConf"
+          label="Confirmação Senha"
+          id="passwordConf"
+          value=""
+          :rules="[ruless.required]"
+        ></v-text-field>
+      </v-card-text>
+      <v-divider class="mt-5"></v-divider>
+      <v-card-actions>
+        <v-btn flat>Cancel</v-btn>
+        <v-spacer></v-spacer>
+        <v-slide-x-reverse-transition>
+        </v-slide-x-reverse-transition>
+        <v-btn color="primary" flat @click="register">Submit</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-flex>
+</v-layout>
 </template>
 
 <script>
