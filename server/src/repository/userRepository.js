@@ -12,7 +12,6 @@ function jwtSignUser (user) {
 
 exports.get = async () => {
   const res = await User.find({
-
   }, 'name email')
   return res
 }
