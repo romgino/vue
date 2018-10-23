@@ -9,5 +9,6 @@ exports.create = async (req) => {
   var repo = await new Servico()
   repo.name = req.name
   repo.ref = req.ref
+  repo.save()
   return repo
 }
