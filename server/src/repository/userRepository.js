@@ -17,6 +17,7 @@ exports.get = async () => {
 }
 exports.create = async (req) => {
   var encodePass = bcrypt.hashSync(req.password, 8)
+  // var encodePass = bcrypt.hashSync(req.password, global.SALT_KEY, null )
   try {
     var item = await new User()
 

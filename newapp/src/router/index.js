@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
 import Servico from '@/components/Servico'
+import Registro from '@/components/Registro'
 
 Vue.use(Router)
 
@@ -23,6 +24,12 @@ export default new Router({
       path: '/servicos',
       name: 'servicos',
       component: Servico
+    },
+    {
+      path: '/registros',
+      name: 'registros',
+      component: Registro
     }
+
   ]
 })

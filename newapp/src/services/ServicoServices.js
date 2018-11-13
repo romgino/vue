@@ -4,7 +4,7 @@ export default {
   register (credentials) {
     return Api().post('servicos/create', credentials)
   },
-  logar (dados) {
+  index (dados) {
     return Api().get('servicos', dados)
   }
 }

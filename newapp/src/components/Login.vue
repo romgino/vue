@@ -33,7 +33,6 @@
     </v-flex>
   </v-layout>
 </template>
-
 <script>
 import Header from '@/components/Header'
 import AuthenticationService from '@/services/AuthenticationServices'
@@ -72,6 +71,7 @@ export default {
         })
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.user)
+        this.$router.push({ name: 'servicos' })
         // console.log('register button was clicked', this.name, this.email, this.password, this.turno, this.passwordConf)
         console.log(response.data)
       } catch (error) {
